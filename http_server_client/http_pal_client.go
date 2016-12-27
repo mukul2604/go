@@ -23,11 +23,11 @@ func main() {
 
 	//Input reading from the client
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter the infix mathematical expression: ")
+	fmt.Print("Enter the expression: ")
 	expr,_  := reader.ReadString('\n')
 
 	// Post the expression evaluation request
-	resp, err = http.PostForm("http://localhost:8080/calc",
+	resp, err = http.PostForm("http://localhost:8080/palindrome",
 			url.Values{"expr": {string(expr)}})
 	if err != nil {
 		log.Fatal(err)
