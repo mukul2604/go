@@ -36,6 +36,10 @@ func handler2(w http.ResponseWriter, r *http.Request) {
 
 func Calculator(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "calling calculator function")
+	r.ParseForm()
+	x := r.FormValue("q")
+	fmt.Println(x)
+	fmt.Fprintf(w, x)
 }
 func main() {
   	//http.HandleFunc("/", echoString)
