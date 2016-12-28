@@ -1,5 +1,7 @@
+//if package is main, it is executable
 package main
 
+//import keyword is used to use inbuilt libraries
 import (
 	"fmt"
 	"log"
@@ -11,12 +13,12 @@ import (
 )
 
 
-
+// Prints the Welcome String
 func EchoWelcome (w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome to H-CHO Server..")
 }
 
-
+// Prints whether expression is a palindrome or not
 func IsPalindrome(w http.ResponseWriter, r *http.Request)  {
 	r.ParseForm()
 	s := r.FormValue("expr")
@@ -32,13 +34,13 @@ func IsPalindrome(w http.ResponseWriter, r *http.Request)  {
 	fmt.Fprintf(w, "Expression %s is a palindrome.", expr)
 }
 
-
+// Prints Server's date and time
 func DateAndTime(w http.ResponseWriter, r *http.Request) {
 	t := time.Now()
 	fmt.Fprintf(w, "Server Date and Time is %s .", t.Format("2006-01-02 15:04:05"))
 }
 
-
+// Reads the CSV data file and print the client order details
 func LookupClient(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	s := r.FormValue("cname")
@@ -78,6 +80,8 @@ func LookupClient(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	//HandleFunc registers the handler function
+	//for the given pattern in the DefaultServeMux
 	http.HandleFunc("/", EchoWelcome)
 	http.HandleFunc("/palindrome", IsPalindrome)
 	http.HandleFunc("/date", DateAndTime)

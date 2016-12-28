@@ -30,7 +30,7 @@ func main() {
 		cname, _ := reader.ReadString('\n')
 
 		// Post the expression evaluation request
-		// url.Values is used to pass the parameter,val
+		// url.Values is used to pass the [parameter,val]
 		resp, err = http.PostForm("http://localhost:8080/clientr",
 			url.Values{"cname": {string(cname)}})
 		if err != nil {

@@ -1,0 +1,24 @@
+This is the most simple(R-CHO where R is H) http client/server implementation.
+Serves:
+    1. Current Date and Time
+    2. Checks whether string is a palindrome
+    3. Gives the client order status
+
+Server Files:               package
+    http_h-cho_server.go    [main]
+Client Files:
+    http_date_client.go     [main]
+    http_pal_client.go      [main]
+    http_check_client.go    [main]
+CSV File:
+    order_status.txt
+
+How to execute:
+     Run the server with localhost:8080
+     Run the client on console
+     Or execute on browser
+        e.g. http://localhost:8080/date
+             http://localhost:8080/clientr?cname=Mark
+             http://localhost:8080/palindrome?expr=abb%20bba%20abb%20bba
+
+
