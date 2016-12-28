@@ -11,7 +11,7 @@ Client Files:
     http_pal_client.go      [main]
     http_check_client.go    [main]
 CSV File:
-    order_status.txt
+    order_status.csv
 
 How to execute:
      Run the server with localhost:8080

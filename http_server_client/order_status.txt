@@ -1,7 +1,0 @@
-Client,Location,Phone,Status
-Mark, Florida, (555)-646-8976, Item Packed
-Robin, Virginia, (456)-343-2345, Item Dispatched
-Emma, NewYork, (642)-323-4590, Item in transit
-Michelle, California, (612)-215-9034, Item Delivered
-Mozart, Texas, (434)-323-4567, Requested for return
-Mike, Arizona, (453)-215-5029, Order Cancelled
