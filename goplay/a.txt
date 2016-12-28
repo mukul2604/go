@@ -1,4 +1,7 @@
-Lead,Title,Phone,Notes
-Jim Grayson,Senior Manager,(555)761-2385,"Spoke Tuesday, he's interested"
-Prescilla Winston,Development Director,(555)218-3981,said to call again next week
-Melissa Potter,Head of Accounts,(555)791-3471,"Not interested, gave referral"
+Client,Location,Phone,Status
+Mark, Florida, (555)-646-8976, "Item Packed"
+Robin, Virginia, (456)-343-2345, "Item Dispatched"
+Emma, NewYork, (642)-323-4590, "Item in transit"
+Michelle, California, (612)-215-9034, "Item Delivered"
+Mozart, Texas, (434)-323-4567, "Requested for return"
+Mike, Arizona, (453)-215-5029, "Order Cancelled"

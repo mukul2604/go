@@ -16,6 +16,8 @@ func main() {
   	if err != nil {
     		log.Fatal(err)
   	}
+	//defer keyword is used to defer the close
+	// it will be definitely called at the end.
   	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
@@ -24,13 +26,13 @@ func main() {
 	for {
 		//Input reading from the client
 		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("Enter the expression: ")
-		expr, _ := reader.ReadString('\n')
+		fmt.Print("Enter the Client name: ")
+		cname, _ := reader.ReadString('\n')
 
 		// Post the expression evaluation request
 		// url.Values is used to pass the parameter,val
-		resp, err = http.PostForm("http://localhost:8080/palindrome",
-			url.Values{"expr": {string(expr)}})
+		resp, err = http.PostForm("http://localhost:8080/clientr",
+			url.Values{"cname": {string(cname)}})
 		if err != nil {
 			log.Fatal(err)
 		}
