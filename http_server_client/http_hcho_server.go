@@ -24,14 +24,20 @@ func IsPalindrome(w http.ResponseWriter, r *http.Request)  {
 	s := r.FormValue("expr")
 	expr := strings.TrimSpace(s)
 	length := len(expr)
+
+	if length <= 0 {
+		fmt.Fprintf(w, "Invalid or Empty Expression")
+		return
+	}
+
 	fmt.Println(length ,expr)
 	for i:=0; i < length/2; i++ {
 		if expr[i] != expr[length - i - 1] {
-			fmt.Fprintf(w, "Expression %s is not palindrome.", expr)
+			fmt.Fprintf(w, "Expression \"%s\" is not palindrome.", expr)
 			return
 		}
 	}
-	fmt.Fprintf(w, "Expression %s is a palindrome.", expr)
+	fmt.Fprintf(w, "Expression \"%s\" is a palindrome.", expr)
 }
 
 // Prints Server's date and time
@@ -45,6 +51,11 @@ func LookupClient(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	s := r.FormValue("cname")
 	client := strings.TrimSpace(s)
+
+	if len(client) <= 0 {
+		fmt.Fprintf(w, "Invalid or Empty Query")
+		return
+	}
 	// package os open. same for all files. returns *File  associated descriptor
 	// it is in only read mode use OpenFile for create/write and other ops
 	//src/order_status.csv
