@@ -2,7 +2,7 @@ This is the most simple(R-CHO where R is H) http client/server implementation.
 Serves:
     1. Current Date and Time
     2. Checks whether string is a palindrome
-    3. Gives the client order status
+    3. Tells the client order status
 
 Server Files:               package
     http_h-cho_server.go    [main]
